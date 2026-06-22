@@ -1,0 +1,12 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" width="192" height="192">
+  <rect width="192" height="192" fill="#7C3AED" rx="45"/>
+  <g transform="translate(96, 96)">
+    <!-- Microphone icon -->
+    <path d="M 0,-35 C -13.3,-35 -25,-23.3 -25,-10 L -25,15 C -25,28.3 -13.3,40 0,40 C 13.3,40 25,28.3 25,15 L 25,-10 C 25,-23.3 13.3,-35 0,-35 Z" fill="white"/>
+    <!-- Sound waves -->
+    <path d="M -40,-25 Q -45,-20 -45,-10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M -40,5 Q -45,0 -45,10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 40,-25 Q 45,-20 45,-10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 40,5 Q 45,0 45,10" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

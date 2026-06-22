@@ -1,0 +1,12 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" width="192" height="192">
+  <g transform="translate(96, 96)">
+    <!-- Microphone icon for maskable - center focus -->
+    <circle cx="0" cy="0" r="60" fill="#7C3AED"/>
+    <path d="M 0,-30 C -11,-30 -20,-21 -20,-10 L -20,12 C -20,23 -11,32 0,32 C 11,32 20,23 20,12 L 20,-10 C 20,-21 11,-30 0,-30 Z" fill="white"/>
+    <!-- Sound waves inside -->
+    <path d="M -35,-15 L -28,-15" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -35,5 L -28,5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 35,-15 L 28,-15" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 35,5 L 28,5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

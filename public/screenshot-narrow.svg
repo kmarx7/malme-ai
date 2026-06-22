@@ -1,0 +1,32 @@
+<svg viewBox="0 0 540 720" xmlns="http://www.w3.org/2000/svg" width="540" height="720">
+  <!-- Background -->
+  <rect width="540" height="720" fill="#f9f9f9"/>
+
+  <!-- Header -->
+  <rect width="540" height="80" fill="#7C3AED"/>
+
+  <!-- Header Text -->
+  <text x="270" y="50" font-size="32" font-weight="bold" fill="white" text-anchor="middle" font-family="system-ui">말메 AI</text>
+
+  <!-- Main Content -->
+  <g transform="translate(0, 150)">
+    <!-- Microphone Circle -->
+    <circle cx="270" cy="120" r="80" fill="#7C3AED" opacity="0.1"/>
+    <circle cx="270" cy="120" r="65" fill="none" stroke="#7C3AED" stroke-width="2"/>
+
+    <!-- Microphone Icon -->
+    <path d="M 270,65 C 250,65 235,80 235,100 L 235,130 C 235,150 250,165 270,165 C 290,165 305,150 305,130 L 305,100 C 305,80 290,65 270,65 Z" fill="#7C3AED"/>
+  </g>
+
+  <!-- Status Text -->
+  <text x="270" y="380" font-size="22" font-weight="600" fill="#333" text-anchor="middle" font-family="system-ui">음성 메모를 시작하세요</text>
+  <text x="270" y="420" font-size="14" fill="#666" text-anchor="middle" font-family="system-ui">AI가 자동으로 분석하고</text>
+  <text x="270" y="445" font-size="14" fill="#666" text-anchor="middle" font-family="system-ui">정리해드립니다</text>
+
+  <!-- Button -->
+  <rect x="160" y="510" width="220" height="55" rx="27.5" fill="#7C3AED"/>
+  <text x="270" y="548" font-size="18" font-weight="bold" fill="white" text-anchor="middle" font-family="system-ui">메모 시작</text>
+
+  <!-- Bottom Navigation -->
+  <rect y="680" width="540" height="40" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+</svg>
