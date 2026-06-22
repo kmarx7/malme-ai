@@ -237,7 +237,7 @@ export default function VoiceRecorder() {
             >
               <Mic size={48} color="#ffffff" strokeWidth={1.5} />
             </button>
-            <h1 style={styles.title}>말메 AI</h1>
+            <h1 style={styles.title}>Voice Memo</h1>
             <p style={styles.subtitle}>마이크 버튼을 눌러<br />음성 메모를 시작하세요</p>
           </>
         )}

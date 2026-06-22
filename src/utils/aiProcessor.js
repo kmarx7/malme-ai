@@ -30,7 +30,7 @@ function buildHeaders() {
   return {
     'Authorization': `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
     'HTTP-Referer': import.meta.env.VITE_APP_URL,
-    'X-Title': import.meta.env.VITE_APP_NAME,
+    'X-Title': 'Malme AI',
     'Content-Type': 'application/json',
   };
 }
@@ -118,30 +118,36 @@ export async function transcribeAudio(base64Audio, mimeType = 'audio/webm') {
     mimeType,
   });
 
-  const audioFormat = mimeType.split('/')[1] ?? 'webm';
-
   try {
-    const text = await callWithFallback(STT_MODELS, (model) => ({
-      model,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'text',
-              text: '다음 음성을 한국어로 정확하게 텍스트로 변환해줘. 변환된 텍스트만 반환하고 다른 설명은 하지 마.',
-            },
-            {
-              type: 'input_audio',
-              input_audio: {
-                data: base64Audio,
-                format: audioFormat,
+    const text = await callWithFallback(STT_MODELS, (model) => {
+      // GPT-4o-audio uses OpenAI's input_audio format
+      // Gemini via OpenRouter uses image_url with data URL (OpenRouter maps this to inline_data)
+      const audioContent = model.includes('gpt-4o-audio')
+        ? {
+            type: 'input_audio',
+            input_audio: { data: base64Audio, format: mimeType.split('/')[1] ?? 'webm' },
+          }
+        : {
+            type: 'image_url',
+            image_url: { url: `data:${mimeType};base64,${base64Audio}` },
+          };
+
+      return {
+        model,
+        messages: [
+          {
+            role: 'user',
+            content: [
+              {
+                type: 'text',
+                text: '다음 음성을 한국어로 정확하게 텍스트로 변환해줘. 변환된 텍스트만 반환하고 다른 설명은 하지 마.',
               },
-            },
-          ],
-        },
-      ],
-    }));
+              audioContent,
+            ],
+          },
+        ],
+      };
+    });
 
     if (!text || text.trim().length === 0) {
       throw new Error('음성 인식 결과가 없습니다. 다시 시도해주세요.');

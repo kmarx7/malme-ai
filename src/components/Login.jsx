@@ -156,7 +156,7 @@ export default function Login() {
         </div>
 
         {/* 앱 이름 */}
-        <h1 style={styles.title}>말메 AI</h1>
+        <h1 style={styles.title}>Voice Memo</h1>
 
         {/* 서브타이틀 */}
         <p style={styles.subtitle}>음성으로 말하기만 하면,<br />AI가 알아서 정리해줘요</p>

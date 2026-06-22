@@ -110,7 +110,7 @@ export default function Home() {
     <div style={s.container}>
       {/* 헤더 */}
       <div style={s.header}>
-        <h1 style={s.title}>말메 AI</h1>
+        <h1 style={s.title}>Voice Memo</h1>
         <div style={s.userInfo}>
           {user?.photoURL && <img src={user.photoURL} alt="" style={s.avatar} />}
           <div>

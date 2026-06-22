@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        name: '말메 AI',
-        short_name: '말메',
-        description: '음성으로 말하기만 하면 AI가 알아서 정리해주는 메모앱',
+        name: 'Voice Memo',
+        short_name: 'Voice Memo',
+        description: 'AI-powered voice memo app',
         theme_color: '#7C3AED',
         background_color: '#ffffff',
         display: 'standalone',
